@@ -217,4 +217,56 @@ h2 {
     .quote-item .quote-analysis {
         font-size: 0.9em;
     }
+
+}
+.resource-links {
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.resource-links h3 {
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.resource-links ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the list items */
+}
+
+.resource-links ul li {
+    margin-bottom: 10px;
+    display: inline-block; /* Makes them side-by-side if enough space */
+    margin: 0 15px 15px; /* Spacing between inline blocks */
+}
+
+.resource-links ul li a {
+    display: flex; /* Allows icon and text to align */
+    align-items: center;
+    text-decoration: none;
+    color: #2980b9; /* Blue link color */
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #2980b9;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: #fff;
+}
+
+.resource-links ul li a:hover {
+    background-color: #2980b9;
+    color: white;
+    border-color: #2980b9;
+}
+
+.resource-links .icon-pdf,
+.resource-links .icon-study {
+    font-size: 1.2em; /* Make icons slightly larger */
+    margin-right: 8px;
 }
