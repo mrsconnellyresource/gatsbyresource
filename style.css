@@ -1,0 +1,220 @@
+/* General Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* Container for Main Content */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.site-header {
+    background-color: #34495e; /* Dark Blue-Gray */
+    color: #ecf0f1; /* Light Gray */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Introduction Section */
+.intro-section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.intro-section h2 {
+    color: #e74c3c; /* Red */
+    text-align: center;
+}
+
+/* Character Sections - General */
+.character-section {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.character-section .character-name {
+    color: #2980b9; /* Default Blue */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    cursor: pointer; /* Indicate it's clickable */
+    user-select: none; /* Prevent text selection on double click */
+    transition: color 0.3s ease;
+}
+
+.character-section .character-name:hover {
+    color: #1a568a; /* Darker blue on hover */
+}
+
+.character-section .character-name .toggle-icon {
+    margin-left: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.character-section .character-name.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.character-section .character-description {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Quotes Container */
+.quotes-container {
+    margin-top: 20px;
+    border-top: 1px dashed #ddd;
+    padding-top: 20px;
+}
+
+.quotes-container.hidden {
+    display: none;
+}
+
+/* Quote Item Styling */
+.quote-item {
+    background-color: #fdfdfd;
+    border-left: 5px solid; /* Will be set by character color classes */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    cursor: pointer; /* Indicate it's clickable */
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.quote-item:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.quote-item.selected {
+    background-color: #e6f7ff; /* Light blue for selected */
+    border-color: #007bff; /* Stronger blue border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: scale(1.01);
+}
+
+.quote-item blockquote {
+    font-style: italic;
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.quote-item .quote-analysis {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+}
+
+/* Character Specific Colors */
+.gatsby-color .character-name { color: #8e44ad; } /* Purple */
+.gatsby-color .character-name:hover { color: #6e2c8c; }
+.gatsby-color .quote-item { border-left-color: #8e44ad; }
+
+.daisy-color .character-name { color: #f1c40f; } /* Yellow */
+.daisy-color .character-name:hover { color: #d6b30c; }
+.daisy-color .quote-item { border-left-color: #f1c40f; }
+
+.tom-color .character-name { color: #c0392b; } /* Dark Red */
+.tom-color .character-name:hover { color: #a12b1f; }
+.tom-color .quote-item { border-left-color: #c0392b; }
+
+.nick-color .character-name { color: #27ae60; } /* Green */
+.nick-color .character-name:hover { color: #1e8449; }
+.nick-color .quote-item { border-left-color: #27ae60; }
+
+.myrtle-color .character-name { color: #e67e22; } /* Orange */
+.myrtle-color .character-name:hover { color: #b86016; }
+.myrtle-color .quote-item { border-left-color: #e67e22; }
+
+.themes-color .character-name { color: #3498db; } /* Light Blue */
+.themes-color .character-name:hover { color: #217dbb; }
+.themes-color .quote-item { border-left-color: #3498db; }
+
+
+/* Footer Styling */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .site-header {
+        padding: 30px 0;
+    }
+    .character-section, .intro-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    .quote-item blockquote {
+        font-size: 1em;
+    }
+    .quote-item .quote-analysis {
+        font-size: 0.9em;
+    }
+}
