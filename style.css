@@ -219,54 +219,101 @@ h2 {
     }
 
 }
-.resource-links {
-    background-color: #f8f8f8;
-    border: 1px solid #eee;
-    padding: 20px;
-    margin-top: 30px;
+/* --- Resource Section Styles --- */
+.resource-section {
+    background-color: #fcfcfc;
+    padding: 40px;
+    margin-top: 40px; /* Space above this section */
+    margin-bottom: 30px; /* Space below this section */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-top: 5px solid #3498db; /* A distinct blue border */
 }
 
-.resource-links h3 {
+.resource-title {
+    font-size: 2.2em;
     color: #34495e;
     text-align: center;
     margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
 }
 
-.resource-links ul {
-    list-style: none;
-    padding: 0;
-    text-align: center; /* Center the list items */
+.resource-intro {
+    font-size: 1.1em;
+    text-align: center;
+    color: #555;
+    margin-bottom: 35px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.resource-links ul li {
-    margin-bottom: 10px;
-    display: inline-block; /* Makes them side-by-side if enough space */
-    margin: 0 15px 15px; /* Spacing between inline blocks */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+    justify-content: center;
 }
 
-.resource-links ul li a {
-    display: flex; /* Allows icon and text to align */
-    align-items: center;
-    text-decoration: none;
-    color: #2980b9; /* Blue link color */
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 1px solid #2980b9;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+.resource-item {
     background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.resource-links ul li a:hover {
-    background-color: #2980b9;
-    color: white;
-    border-color: #2980b9;
+.resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: #3498db; /* Highlight border on hover */
 }
 
-.resource-links .icon-pdf,
-.resource-links .icon-study {
-    font-size: 1.2em; /* Make icons slightly larger */
-    margin-right: 8px;
+.resource-item a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color from parent */
+    display: block; /* Make the whole item clickable */
+}
+
+.resource-item .resource-icon {
+    font-size: 3em; /* Large icon */
+    color: #3498db; /* Icon color */
+    margin-bottom: 15px;
+    display: block; /* Ensure it takes its own line */
+}
+
+.resource-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.resource-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.resource-note {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #f0f8ff; /* Light blue background for note */
+    border-left: 5px solid #add8e6; /* Light blue border */
+    border-radius: 5px;
+}
+
+/* Add any new media queries for responsive adjustments of the resource grid if needed */
+@media (max-width: 600px) {
+    .resource-grid {
+        grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+    }
 }
